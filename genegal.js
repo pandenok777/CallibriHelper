@@ -1,4 +1,3 @@
-<script>
 function myurl() {
 var regexp = /limit=([^&]+)/i;
     var GetValue = '';
@@ -7,5 +6,4 @@ var regexp = /limit=([^&]+)/i;
     var valueurl=document.getElementById('valueurl');
     document.getElementById('valueurl').innerHTML=GetValue.split('\n').join('<br>');
         
-}        
-</script>
+}
