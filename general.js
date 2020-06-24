@@ -1,4 +1,6 @@
-object.onclick = function(){myurl};
-function myurl() {
-    alert('Добрый вечерочек');
+document.getElementById("myurl").onclick = function() {myFunction()};
+
+function myFunction() {
+  document.getElementById("valueurl").innerHTML = "YOU CLICKED ME!";
+  alert('Добрый вечерочек');
 }
