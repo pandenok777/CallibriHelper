@@ -9,8 +9,7 @@ function myFunction() {
 }
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-  console.log('Looking on the page' + tab.url + ' element with desired classname');
   chrome.tabs.executeScript({
-    code: 'var testElements = document.getElementsByClassName("callibri_phone"); var el = testElements[0]; if (el) {document.getElementById("callibriphonechecker").innerHTML = 'Опачки! Да на странице есть размеченные дефолтным классом элементы!';}'
+    code: 'var testElements = document.getElementsByClassName("callibri_phone"); var el = testElements[0]; if (el) {console.log('Looking on the page' + tab.url + ' element with desired classname');}'
   });
 });
