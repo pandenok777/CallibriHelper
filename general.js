@@ -7,8 +7,3 @@ function myFunction() {
     document.getElementById("valueurl").innerHTML = url;
 });
 }
-
-function(){
-  var today = new Date();
-  $("#today_date").html(today.getDate()+"."+(parseInt(today.getMonth())+1)+"." + today.getFullYear());
-}
