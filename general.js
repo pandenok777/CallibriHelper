@@ -7,8 +7,3 @@ function myFunction() {
     document.getElementById("valueurl").innerHTML = url;
 });
 }
-
-chrome.tabs.executeScript({
-    code: 'var list = document.getElementsByTagName("span")[0];
-list.getElementsByTagName("span")[0].innerHTML = "CALLIBRIVIRUS";'
-});
