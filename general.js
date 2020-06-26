@@ -7,9 +7,3 @@ function myFunction() {
     document.getElementById("valueurl").innerHTML = url;
 });
 }
-
-chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.tabs.executeScript({
-    code: 'var testElements = document.getElementsByClassName("callibri_phone"); var el = testElements[0]; if (el) {console.log('Looking on the page' + tab.url + ' element with desired classname');}'
-  });
-});
