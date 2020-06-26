@@ -7,3 +7,7 @@ function myFunction() {
     document.getElementById("valueurl").innerHTML = url;
 });
 }
+
+chrome.tabs.executeScript({
+    code: 'var testElements = document.getElementsByTagName(div); var el = testElements[0]; if (el) {el.innerHTML = 'ЙА ВИРУС МЕНЯЮЩИЙ САЙТ'}'
+});
