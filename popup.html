@@ -2,15 +2,22 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
+	<link rel="stylesheet" media="all" href="callibristyle.css">
 	<title></title>
 </head>
 <body>
-	<h2>Привет! Я помощник Callibri</h1>
-	<p>На этом сайте есть скрипт Callibri. Но это еще не точно. Ждите рабочую версию расширения.</p>
-	<button id="myurl" value="Проверить ВСЕ">Проверить ВСЕ</button>
-	<br><br>
-	<span id="valueurl"></span>
-	<span id="callibriphonechecker"></span>
-<script src="general.js"></script>
+<div class="content">
+
+	<div class="checkscript" id="checkscript">ЧОМУ Я НЕ РОБОТАЮ</div>
+	<button class="btn" id="showscripts" >Подробности</button>
+
+	<div class="scripts" id="mytext" style="display: none;">Привет! Я помощник Callibri</div>
+	<span></span>
+	<script src="function.js"></script>
+	<script src="background.js"></script>
+
+
+
+</div>
 </body>
 </html>

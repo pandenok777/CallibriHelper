@@ -1,0 +1,36 @@
+body {
+  width:400px;
+  font-size: 15px;
+}
+.scripts {
+  white-space: nowrap;
+
+}
+.scripts div {
+  margin-top: 5px;
+  overflow: scroll;
+  text-overflow: scroll;
+  text-align:center;
+}
+.checkscript{
+
+}
+.green {
+  color: green;
+}
+.red {
+  color:red;
+}
+.btn {
+  text-decoration: none;
+outline: none;
+color: white;
+border-radius: 10px;
+font-family: 'Montserrat', sans-serif;
+text-transform: uppercase;
+letter-spacing: 2px;
+background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+background-size: 200% auto;
+box-shadow: 0 0 20px rgba(0,0,0,.1);
+transition: .5s;
+}
