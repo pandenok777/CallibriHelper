@@ -2,7 +2,7 @@
 showscripts.addEventListener('click',ShowandHide);
 
 function ShowandHide() {
-  var shadow = document.getElementById ('mytext');
+  var shadow = document.getElementById('more_info');
   if (shadow.style.display !== 'none'){
   	shadow.style.display="none";
   }else{

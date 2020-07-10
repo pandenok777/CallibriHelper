@@ -1,26 +1,15 @@
-// background.js
-// Вызывается, когда пользователь нажимает на действие браузера.
-chrome.browserAction.enable(function(tab) {
-  // Отправить сообщение на активную вкладку
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    var activeTab = tabs[0];
-    chrome.tabs.sendMessage(activeTab.id, {"message": "clicked_browser_action"});
-  });
-});
-
+//background.js
 
 // Слушаем сообщения
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    if( request.message === "yes" ) {
-      // Выводим че нашли
-      document.getElementById("checkscript").innerHTML = '<span class="green">Скрипт есть!))))</span>';
-      document.getElementById("mytext").innerHTML = request.script;
+    if( request.message === "callibri" && request.script != '' ) {
+      chrome.browserAction.setIcon({ path: { "19": "icongreen-19.png",
+                                       "38": "icongreen-38.png" } });;
     }
-    else if (request.message === "nope")
+    else
     {
-      document.getElementById("checkscript").innerHTML = '<span class="red">Скрипта нет!</span>';
-      document.getElementById("mytext").innerHTML = "";
+      chrome.browserAction.setIcon({ path: { "19": "iconred-19.png",
+                                       "38": "iconred-38.png" } });;
     }
-  }
-);
+    });

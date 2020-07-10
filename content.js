@@ -11,31 +11,38 @@ function escapeHtml(text) {
     return text.replace(/[&<>"']/g, function(m) { return map[m]; });
   }
 // Функция поиска скрипта
-var FindScript = function(request, sender, sendResponse) {
+var FindScript = function(anyscript,callmessage ) {
 
       // ищем в доме скрипт
       const scripthtml = document.querySelectorAll("script");
       var strinscripthtml = '';
+      var message
       scripthtml.forEach(function(item, i, scripthtml){
-        if (item.outerHTML.includes('callibri.js')) {
+        if (item.outerHTML.includes(anyscript)) {
       strinscripthtml = strinscripthtml + '<div>' + escapeHtml(item.outerHTML) + '</div>';
     }
       });
       // есть скрипт или нет
       if  (strinscripthtml != '') {
-        chrome.runtime.sendMessage({"message": "yes", "script": strinscripthtml});
+        chrome.runtime.sendMessage({"message": callmessage, "script": strinscripthtml});
+        //console.log('Скрипта есть')
       }
       else
       {
-        chrome.runtime.sendMessage({"message": "nope", "script": ''});
-        console.log('Скрипта нет')
+        chrome.runtime.sendMessage({"message": callmessage, "script": ''});
+        //console.log('Скрипта нет')
       }
+      return strinscripthtml;
 }
 // если услышали клик - выполняем функцию
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
-      FindScript();
+      FindScript('metrika/tag.js', 'metrika');
+      FindScript('googletagmanager', 'analytics');
+      FindScript('callibri.js', 'callibri');
+
     }
   }
 );
+window.onload = FindScript('callibri.js', 'callibri');
