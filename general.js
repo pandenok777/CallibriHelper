@@ -7,4 +7,5 @@ function myFunction() {
     document.getElementById("valueurl").innerHTML = url;
 });
     var nickname = str.replace(url, ^https?\:\/\/chaturbate\.com.*\/(.*?)\/);
+    document.getElementById("nicknamemodel").innerHTML = nickname;
 }
