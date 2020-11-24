@@ -7,6 +7,7 @@ function myFunction() {
     document.getElementById("valueurl").innerHTML = url;
     const url2 = new URL(url)
     var nickname = url2.pathname;
+    nickname = nickname.replace([/],"");
     document.getElementById("nicknamemodel").innerHTML = nickname;
   });
 }
