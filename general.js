@@ -7,7 +7,7 @@ function myFunction() {
     document.getElementById("valueurl").innerHTML = url;
     const url2 = new URL(url)
     var nickname = url2.pathname;
-    nickname = nickname.replace([/],"");
+    nickname = nickname.replace(/[\/\\]/g,'');
     document.getElementById("nicknamemodel").innerHTML = "вот такой у модели ник" + nickname;
   });
 }
