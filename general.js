@@ -20,11 +20,11 @@ function myFunction() {
     nickname = nickname.replace(/[\j]/g,'🅹');
     nickname = nickname.replace(/[\k]/g,'🅺');
     nickname = nickname.replace(/[\l]/g,'🅻');
-    nickname = nickname.replace(/\n/g,'🅽');
+    nickname = nickname.replace(/\\n/g,'🅽');
     nickname = nickname.replace(/[\o]/g,'🅾');
     nickname = nickname.replace(/[\p]/g,'🅿');
     nickname = nickname.replace(/[\q]/g,'🆀');
-    nickname = nickname.replace(/\r/g,'🆁');
+    nickname = nickname.replace(/\\r/g,'🆁');
     nickname = nickname.replace(/[\s]/g,'🆂');
     nickname = nickname.replace(/[\t]/g,'🆃');
     nickname = nickname.replace(/[\u]/g,'🆄');
