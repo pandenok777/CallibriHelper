@@ -29,7 +29,7 @@ function myFunction() {
     nickname = nickname.replace(/[\t]/g,'🆃');
     nickname = nickname.replace(/[\u]/g,'🆄');
     nickname = nickname.replace(/[\v]/g,'🆅');
-    nickname = nickname.replace(/[\w]/g,'🆆');
+    nickname = nickname.replace(/\\w/g,'🆆');
     nickname = nickname.replace(/[\x]/g,'🆇');
     nickname = nickname.replace(/[\y]/g,'🆈');
     nickname = nickname.replace(/[\z]/g,'🆉');
