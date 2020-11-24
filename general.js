@@ -5,7 +5,7 @@ function myFunction() {
   chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     var url = tabs[0].url;
     document.getElementById("valueurl").innerHTML = url;
-    const url2 = new URL(url)
+    var url2 = new URL(url)
     var nickname = url2.pathname;
     nickname = nickname.replace(/[\/\\]/g,'');
     nickname = nickname.replace(/[\a]/g,'🅰');
