@@ -6,6 +6,6 @@ function myFunction() {
     var url = tabs[0].url;
     document.getElementById("valueurl").innerHTML = url;
 });
-    var nickname = url.replace(/^https?\:\/\/chaturbate\.com.*\/(.*?)\/);
+    var nickname = url.replace(/https\:\/\/chaturbate\.com.*\/(.*?)\/);
     document.getElementById("nicknamemodel").innerHTML = nickname;
 }
