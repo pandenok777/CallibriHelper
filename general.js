@@ -4,7 +4,7 @@ function myFunction() {
   document.getElementById("myurl").innerHTML = "готово епта)) копируй хуле";
   chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     var url = tabs[0].url;
-    document.getElementById("valueurl").innerHTML = url;
+    //document.getElementById("valueurl").innerHTML = url;
     var url2 = new URL(url)
     var nickname = url2.pathname;
     nickname = nickname.replace(/[\/\\]/g,'');
@@ -20,6 +20,7 @@ function myFunction() {
     nickname = nickname.replace(/[j]/g,'🅹');
     nickname = nickname.replace(/[k]/g,'🅺');
     nickname = nickname.replace(/[l]/g,'🅻');
+    nickname = nickname.replace(/[m]/g,'🅼');
     nickname = nickname.replace(/[n]/g,'🅽');
     nickname = nickname.replace(/[o]/g,'🅾');
     nickname = nickname.replace(/[p]/g,'🅿');
@@ -44,6 +45,5 @@ function myFunction() {
     nickname = nickname.replace(/[9]/g,'𝟡');
     nickname = nickname.replace(/[0]/g,'𝟘');
     document.getElementById("nicknamemodel").innerHTML = nickname + " + 🅿🅾🅲🅾🅼🅰🆇🅰 = :biglover ";
-    document.getElementsByClassName("theatermodeInputFieldChat").innerHTML = nickname + " + 🅿🅾🅲🅾🅼🅰🆇🅰 = :biglover ";
   });
 }
