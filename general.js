@@ -8,6 +8,6 @@ function myFunction() {
     const url2 = new URL(url)
     var nickname = url2.pathname;
     nickname = nickname.replace([/],"");
-    document.getElementById("nicknamemodel").innerHTML = nickname;
+    document.getElementById("nicknamemodel").innerHTML = "вот такой у модели ник" + nickname;
   });
 }
