@@ -44,8 +44,5 @@ function myFunction() {
     nickname = nickname.replace(/[\9]/g,'𝟡');
     nickname = nickname.replace(/[\0]/g,'𝟘');
     document.getElementById("nicknamemodel").innerHTML = nickname + " + 🅿🅾🅲🅾🅼🅰🆇🅰 = :biglover ";
-    var copyText = document.getElementById("nicknamemodel");
-    copyText.select();
-    document.execCommand("copy");
   });
 }
